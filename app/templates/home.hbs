@@ -1,0 +1,96 @@
+{{!Главная страница}}
+
+{{> layout/header }}
+
+<main class="main">
+  <div class="main__row">
+    <div class="main__col main__col-1">
+      <p class="main__info-free">Это бесплатно</p>
+      <h1 class="main__info-heading">
+        За 1 минуту получите
+        расчет стоимости <span>жалюзи</span>
+        + подарок и сидку до -50%
+      </h1>
+      <h3 class="main__info-sub-heading">
+        при оставлении заявки <span>через сайт</span>
+      </h3>
+      <div class="main__info-wrap">
+        <div class="main__info-item">
+          <div class="main__info-item__img main__info-item__img-1">
+            <img src="../static/images/info-item-1.png" alt="fast">
+          </div>
+          <div class="main__info-item__inner">
+            <h4 class="main__info-item__heading">Уже через </br>24 часа</h4>
+            <p class="main__info-item__text">
+              Мы установим Вам жалюзи
+              или рулонные шторы по
+              вашим параметрам после расчета стоимости 
+            </p>
+          </div>
+        </div>
+        <div class="main__info-item">
+          <div class="main__info-item__img main__info-item__img-2">
+            <img src="../static/images/info-item-2.png" alt="fast">
+          </div>
+          <div class="main__info-item__inner">
+            <h4 class="main__info-item__heading">5000+ видов </br>на складе</h4>
+            <p class="main__info-item__text">
+              Ассортимерт из более
+              чем 5000 видов жалюзи
+              и штор всегда в наличии
+              на собственном складе
+            </p>
+          </div>
+        </div>
+        <div class="main__info-item">
+          <div class="main__info-item__img main__info-item__img-3">
+            <img src="../static/images/info-item-3.png" alt="fast">
+          </div>
+          <div class="main__info-item__inner">
+            <h4 class="main__info-item__heading">Рассрочка </br>и расширенная гарантия</h4>
+            <p class="main__info-item__text">
+              Предоставляем внутреннюю
+              рассрочку без %, банков и
+              поручителей на месте. Даем гарантию качества: от 15 лет срок службы
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="main__btn-wrap">
+        <a class="main__btn" href="#">
+          Начать расчёт
+          <span class="main__btn-info">+ получить подарок и скидку</span>
+          <span class="main__btn-inner"></span>
+        </a>
+      </div>
+      </div>
+    <div class="main__col main__col-2">
+      <div class="main__examples-wrap">
+        <p class="main__examples-text">Примеры наших работ <span>за декабрь 2019</span></p>
+        <div class="main__examples-tab">
+          <button class="main__examples-tab__item active">Жалюзи</button>
+          <button class="main__examples-tab__item">Рольставни</button>
+        </div>
+      </div>
+      
+      <div class="slider__wrap">
+        <div class="slider">
+          <img src="../static/images/slider-item.png" alt="slider-item">
+        </div>
+        <div class="slider__counter">
+          <button class="slider__prev-btn" disabled>
+            <img src="../static/images/counter-arrow.png" alt="prev-btn">
+          </button>
+          <div class="slider__counter-nums">
+            <span class="slider__current-num-counter">1</span>/<span class="slider__max-num-counter">8</span>
+          </div>
+          <button class="slider__next-btn">
+            <img src="../static/images/counter-arrow.png" alt="next-btn">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{{> layout/footer }}

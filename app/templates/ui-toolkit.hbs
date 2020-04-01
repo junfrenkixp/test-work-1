@@ -1,0 +1,249 @@
+{{!Ui toolkit}}
+
+{{> layout/head }}
+
+<section class="ui">
+  <div class="ui-container">
+    <header class="ui-header">
+      <h1 class="ui-title">
+        UI Toolkit
+      </h1>
+    </header>
+
+    <main class="ui-main">
+      <aside class="ui-aside">
+        <h2 class="ui-aside-title">
+          Sections
+        </h2>
+        <nav class="ui-aside--inner">
+          <ul class="ui-nav">
+            <li class="ui-nav-item">
+              <button class="_link" data-id="ui-colors">Colors</button>
+            </li>
+            <li class="ui-nav-item">
+              <button class="_link" data-id="ui-text">Text</button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="ui-content">
+        {{> ui/ui-section-start 
+                    title='Colors' 
+                    id='ui-colors'
+                }}
+
+        <div class="ui-list">
+          <div class="_item">
+            <span class="ui-color-name">$white-color</span>
+            <div class="ui-color" style="background-color: #ffffff;">
+              <span style="color: #000000;">#ffffff</span>
+            </div>
+          </div>
+          <div class="_item">
+            <span class="ui-color-name">$white-color</span>
+            <div class="ui-color" style="background-color: #ffffff;">
+              <span style="color: #000000;">#ffffff</span>
+            </div>
+          </div>
+        </div>
+
+        {{> ui/ui-section-end}}
+
+        {{> ui/ui-section-start 
+            title='Text' 
+            id='ui-text'
+        }}
+
+        <h1 class="heading">h1 Roboto 24px</h1>
+
+        {{> ui/ui-section-end}}
+
+        {{> ui/ui-section-start 
+            title='Buttons' 
+            id='ui-buttons'
+        }}
+
+        <div class="ui-list">
+          <div class="_item">
+            <button class="btn btn-primary">button</button>
+          </div>
+          <div class="_item">
+            <button class="btn btn-secondary">button</button>
+          </div>
+        </div>
+
+        {{> ui/ui-section-end}}
+
+        {{> ui/ui-section-start 
+            title='Buttons Sizes' 
+            id='ui-buttons-sizes'
+        }}
+
+        <div class="ui-list">
+          <div class="_item">
+            <button class="btn btn-primary btn-lg">button</button>
+          </div>
+          <div class="_item">
+            <button class="btn btn-secondary btn-sm">button</button>
+          </div>
+        </div>
+
+        {{> ui/ui-section-end}}
+
+        {{> ui/ui-section-start 
+            title='Buttons Disabled' 
+            id='ui-buttons-disabled'
+        }}
+
+        <div class="ui-list">
+          <div class="_item">
+            <button class="btn btn-primary disabled">button</button>
+          </div>
+          <div class="_item">
+            <button class="btn btn-secondary disabled">button</button>
+          </div>
+        </div>
+
+        {{> ui/ui-section-end}}
+
+        {{> ui/ui-section-start 
+            title='Forms' 
+            id='ui-forms'
+        }}
+
+        <div class="row">
+          <div class="col-md-6">
+            {{> ui/input label='Example label' placeholder='Input placeholder'}}
+          </div>
+
+          <div class="col-md-6">
+            {{> ui/input label='Example label' input-class='form-error' error=1}}
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+          <div class="col-md-6">
+            {{> ui/input label='Example label' placeholder='Input disabled' disabled=1}}
+          </div>
+
+          <div class="col-md-6">
+            {{> ui/input label='Example label' select=1 placeholder='Choose any one'}}
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <div class="col-md-6">
+            {{> ui/radio id=1 name='radio1' label='Example label'}}
+            <br>
+            {{> ui/radio id=2 name='radio1' label='Example label' checked=1}}
+          </div>
+
+          <div class="col-md-6">
+            {{> ui/checkbox id=3 label='Example label'}}
+            <br>
+            {{> ui/checkbox id=4 label='Example label' checked=1}}
+          </div>
+        </div>
+
+        {{> ui/ui-section-end}}
+
+        {{> ui/ui-section-start 
+            title='Popups' 
+            id='ui-popups'
+        }}
+
+        <div class="ui-list">
+          <div class="_item">
+            <button class="btn btn-primary" data-popup="example">button</button>
+          </div>
+        </div>
+
+        {{> ui/ui-section-end}}
+
+        {{> ui/ui-section-start 
+            title='Loader' 
+            id='ui-loader'
+        }}
+
+        <div class="loader">
+          <div class="loader__circle">Loading...</div>
+
+          <div class="row">
+            <div class="col-md-6">
+              {{> ui/input label='Example label' placeholder='Input placeholder'}}
+            </div>
+
+            <div class="col-md-6">
+              {{> ui/input label='Example label' input-class='form-error' error=1}}
+            </div>
+          </div>
+
+          <br>
+          <br>
+
+          <div class="row">
+            <div class="col-md-6">
+              {{> ui/input label='Example label' placeholder='Input disabled' disabled=1}}
+            </div>
+
+            <div class="col-md-6">
+              {{> ui/input label='Example label' select=1 placeholder='Choose any one'}}
+            </div>
+          </div>
+
+          <br>
+
+          <div class="row">
+            <div class="col-md-6">
+              {{> ui/radio id=1 name='radio1' label='Example label'}}
+              <br>
+              {{> ui/radio id=2 name='radio1' label='Example label' checked=1}}
+            </div>
+
+            <div class="col-md-6">
+              {{> ui/checkbox id=3 label='Example label'}}
+              <br>
+              {{> ui/checkbox id=4 label='Example label' checked=1}}
+            </div>
+          </div>
+        </div>
+
+        {{> ui/ui-section-end}}
+
+        {{> ui/ui-section-start 
+            title='Loader Empty' 
+            id='ui-loader-empty'
+        }}
+
+        <div class="loader loader--trans">
+          <div class="loader__circle">Loading...</div>
+        </div>
+
+        {{> ui/ui-section-end}}
+
+
+      </section>
+    </main>
+  </div>
+</section>
+
+{{> popups/example}}
+
+<script>
+  window.onload = () => {
+    const $btn = $('.ui-nav').find('._link');
+    $btn.on('click', function () {
+      const id = $(this).data('id');
+      $('html, body').animate({
+        scrollTop: $(`#${id}`).offset().top
+      }, 600);
+    });
+  };
+</script>
+
+{{> layout/bottom }}

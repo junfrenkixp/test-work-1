@@ -1,0 +1,7 @@
+.cool {
+  @include sprite(btn-arrow-d);
+
+  &:before {
+    content: url(/static/svg/sprite/btn-arrow-d.svg);
+  }
+}

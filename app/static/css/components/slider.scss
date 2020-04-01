@@ -1,0 +1,73 @@
+.slider {
+  &__wrap {
+    position: relative;
+    
+    @include tablet-and-phone {
+      text-align: center;
+    }
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -25px;
+    left: 58px;
+    width: 104px;
+    height: 107px;
+
+    background-image: url(../images/counter-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @include tablet-and-phone {
+      left: 20%;
+    }
+
+    @include mobile-s {
+      left: 10%;
+    }
+
+    @include mobile-m {
+      left: 10%;
+    }
+  }
+
+  &__counter-nums {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 14px;
+  }
+
+  &__current-num-counter {
+    font-size: 20px;
+    letter-spacing: 2px;
+    @include BerlingskeSerif;
+    @include extrabold;
+  }
+
+  &__max-num-counter {
+    letter-spacing: 1.6px;
+    @include BerlingskeSerif;
+    @include medium;
+  }
+
+  &__prev-btn {
+    transform: scale(-1, 1);
+  }
+
+  &__prev-btn,
+  &__next-btn {
+    padding: 8px;
+
+    &:disabled {
+      opacity: .5;
+      cursor: default;
+    }
+
+    img {
+      display: block;
+    }
+  }
+}

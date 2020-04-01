@@ -1,0 +1,68 @@
+@mixin font($name, $family, $weight, $style) {
+  $fonts_dir: '../fonts/';
+  $font_file_path: $fonts_dir + $family + '/' + $name;
+
+  @font-face {
+    font-family: $family;
+    src: url($font_file_path+'.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin font-mixin($font_name) {
+  font-family: '#{$font_name}', 'Arial', 'Helvetica', 'Tahoma', sans-serif;
+}
+
+@include font('Medium-italic', 'BerlingskeSerif', 500, italic);
+@include font('Bold-italic', 'BerlingskeSerif', 700, italic);
+@include font('ExtraBold-italic', 'BerlingskeSerif', 800, italic);
+@include font('Black-italic', 'BerlingskeSerif`', 900, italic);
+
+@include font('Regular', 'GothamPro', 400, normal);
+@include font('Medium', 'GothamPro', 500, normal);
+@include font('Bold', 'GothamPro', 700, normal);
+
+@include font('Thin', 'MuseoSans', 100, normal);
+@include font('Light', 'MuseoSans', 300, normal);
+@include font('Medium', 'MuseoSans', 500, normal);
+
+@mixin BerlingskeSerif() {
+  @include font-mixin('BerlingskeSerif');
+}
+
+@mixin GothamPro() {
+  @include font-mixin('GothamPro');
+}
+
+@mixin MuseoSans() {
+  @include font-mixin('MuseoSans');
+}
+
+@mixin thin() {
+  font-weight: 100;
+}
+
+@mixin light() {
+  font-weight: 300;
+}
+
+@mixin regular() {
+  font-weight: 400;
+}
+
+@mixin medium() {
+  font-weight: 500;
+}
+
+@mixin bold() {
+  font-weight: 700;
+}
+
+@mixin extrabold() {
+  font-weight: 800;
+}
+
+@mixin black() {
+  font-weight: 900;
+}

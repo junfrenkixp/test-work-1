@@ -1,0 +1,80 @@
+* {
+  outline: none !important;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  @include GothamPro;
+  @include regular;
+  min-width: 320px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  background: url(../images/bg-3.png) 50% 30% no-repeat, url(../images/bg-1.png) 50% 50% no-repeat, url(../images/bg-2.png) 50% 50% no-repeat;
+  background-size: cover;
+
+  &.popup-opened,
+  &.menu-opened {
+    overflow: hidden;
+
+    @include mobile {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+  @include regular;
+  font-size: 13px;
+
+  &::-ms-clear {
+    display: none !important;
+  }
+
+  &::-ms-reveal {
+    display: none !important;
+  }
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  @include regular;
+  font-size: 12px;
+}
+
+main {
+  display: block;
+}
+
+.hidden-md {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.hidden-sm {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.hidden-xs {
+  @include mobile {
+    display: none !important;
+  }
+}
