@@ -18,7 +18,7 @@ module.exports = () => {
 
     return $.gulp
       .src('./' + $.config.sourcePath + '/' + $.config.stylesPath + '/main.scss')
-      .pipe($.gulpPlugin.sourcemaps.init())
+      //.pipe($.gulpPlugin.sourcemaps.init())
       .pipe($.gulpPlugin.sass().on('error', $.gulpPlugin.sass.logError))
       .pipe(
         $.gulpPlugin.autoprefixer({
@@ -26,8 +26,8 @@ module.exports = () => {
           cascade: 1,
         }),
       )
-      .pipe($.gulpPlugin.csso())
-      .pipe($.gulpPlugin.sourcemaps.write())
+      //.pipe($.gulpPlugin.csso())
+      //.pipe($.gulpPlugin.sourcemaps.write())
       .pipe($.gulp.dest($.config.tmpPath + '/' + $.config.staticPath + '/css'))
       .pipe($.gulpPlugin.csslint('./config/.csslintrc'))
       .pipe($.bs.reload({ stream: true }))
